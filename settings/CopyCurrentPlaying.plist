@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = CopyCurrentPlaying;
+	cell = PSLinkCell;
+	detail = CopyCurrentPlayingListController;
+	icon = CopyCurrentPlaying.png;
+	isController = 1;
+	label = CopyCurrentPlaying;
+    };
+}
