@@ -122,10 +122,23 @@ NSString *alrt  =@"";
 			if(![nowPlayingTitle isEqual:nowPlayingTitle_tmp])
 			{
 
-				[nowPlayingTitle setString:nowPlayingTitle_tmp];
-				[nowPlayingArtist setString:[dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoArtist]];
-				[nowPlayingAlbum setString:[dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoAlbum]];
+				if(nowPlayingTitle_tmp != NULL){
+					[nowPlayingTitle setString:nowPlayingTitle_tmp];
+				}else
+				{
+					[nowPlayingTitle setString:@""];
+				}
+				if( [dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoArtist] != NULL ){
+					[nowPlayingArtist setString:[dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoArtist]];
+				}else{
+					[nowPlayingArtist setString:@""];
 
+				}
+				if( [dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoAlbum] != NULL ){
+					[nowPlayingAlbum setString:[dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoAlbum]];
+				}else{
+						[nowPlayingAlbum setString:@""];
+				}
 				NSLog(@"CCP: WE GOT A NEW TITLE, LETS SET THE VALUES AS  %@ and %@ and %@  ",nowPlayingTitle,nowPlayingArtist,nowPlayingAlbum);
 
 
