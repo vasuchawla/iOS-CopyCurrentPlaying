@@ -24,3 +24,11 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
 # Pods/
+
+.theos/fakeroot
+
+.theos/last_package
+
+.theos/packages/com.vasuchawla.copycurrentplaying-1.0.1
+
+com.vasuchawla.copycurrentplaying_1.0.1-1_iphoneos-arm.deb

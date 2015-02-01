@@ -1,7 +1,7 @@
 Package: com.vasuchawla.copycurrentplaying
 Name: CopyCurrentPlaying
 Depends: mobilesubstrate, libactivator
-Version: 1.0.1
+Version: 1.0.2
 Architecture: iphoneos-arm
 Description: Copy the current song/last played song details in clipboard from activator action. Modify the string format for song details in settings.
 Maintainer: Vasu Chawla

@@ -113,9 +113,9 @@ NSString *alrt  =@"";
 			NSLog(@"CCP: TRACKING !!!");
 
 		NSDictionary *dict=(__bridge NSDictionary *)(information);
-			NSLog(@"CCP: traaackerr !!! %@",dict);
+			// NSLog(@"CCP: traaackerr !!! %@",dict);
 
-		if( dict != NULL ){
+		if( dict != NULL && [dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoTitle]!= NULL ){
 			// NSString *nowPlayingTitle_ .l =
 			NSString *nowPlayingTitle_tmp = [[NSString alloc] initWithString:[dict objectForKey:(__bridge NSString *)kMRMediaRemoteNowPlayingInfoTitle]];
 			// NSLog(@"CCP: COMPARING %@ and %@ (second is new)",nowPlayingTitle, nowPlayingTitle_tmp);
